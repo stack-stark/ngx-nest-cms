@@ -25,9 +25,15 @@
             "aot": true,
             "assets": [
               "projects/cms-client/src/favicon.ico",
-              "projects/cms-client/src/assets"
+              "projects/cms-client/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "projects/cms-client/src/styles.less"
             ],
             "scripts": []
@@ -91,6 +97,7 @@
               "projects/cms-client/src/assets"
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "projects/cms-client/src/styles.less"
             ],
             "scripts": []
@@ -145,9 +152,15 @@
             "aot": true,
             "assets": [
               "projects/cms-admin/src/favicon.ico",
-              "projects/cms-admin/src/assets"
+              "projects/cms-admin/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "projects/cms-admin/src/styles.less"
             ],
             "scripts": []
@@ -211,6 +224,7 @@
               "projects/cms-admin/src/assets"
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "projects/cms-admin/src/styles.less"
             ],
             "scripts": []

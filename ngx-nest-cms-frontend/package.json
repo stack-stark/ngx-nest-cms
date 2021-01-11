@@ -1,13 +1,20 @@
 {
   "name": "ngx-nest-cms-frontend",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start:cms-client": "ng serve --hmr --project cms-client --port 2021",
+    "start:cms-admin": "ng serve --hmr --project cms-admin --port 2022",
+    "build:cms-client": "ng build --prod --project cms-client --stats-json",
+    "build:cms-admin": "ng build --prod --project cms-admin --stats-json --base-href /cms-admin/",
+    "bundle-report:cms-client": "webpack-bundle-analyzer dist/cms-client/stats.json",
+    "bundle-report:cms-admin": "webpack-bundle-analyzer dist/cms-admin/stats.json",
+    "test:cms-client": "ng test --project cms-client",
+    "test:cms-admin": "ng test --project cms-admin",
+    "lint:cms-client": "ng lint  --project cms-client",
+    "lint:cms-admin": "ng lint --project cms-admin",
+    "e2e:cms-client": "ng e2e  --project cms-client",
+    "e2e:cms-admin": "ng e2e --project cms-admin"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +26,7 @@
     "@angular/platform-browser": "~11.0.1",
     "@angular/platform-browser-dynamic": "~11.0.1",
     "@angular/router": "~11.0.1",
+    "ng-zorro-antd": "^11.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -40,6 +48,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "webpack-bundle-analyzer": "^4.3.0"
   }
 }
